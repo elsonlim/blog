@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0;
+      }
+
+      .info-box {
+        background-color: hotpink;
+        border-radius: 0.2em;
+        padding: 1em;
+      }
+
+      .info-box + .info-box {
+        margin-top: 1em;
+      }
+
+      .info-box h3 {
+        margin: 0;
+      }
+
+      .info-box__content-box {
+        border-radius: 0.2em;
+        background-color: aquamarine;
+        padding: 1em;
+      }
+
+      .info-box__content-box span + span {
+        margin-left: 0.5em;
+      }
+    </style>
+  </head>
+  <body>
+    <article class="info-box">
+      <h3>Absolute</h3>
+      <p>
+        Absolute positioning will bring the element out of it's normal flow. It
+        will now be position relative to the containing
+        <strong>html page</strong>.
+      </p>
+      <div class="info-box__content-box">
+        <div>Item 1</div>
+        <div style="position: absolute; top: 0em; right: 0;">
+          Absolute Item 2
+        </div>
+        <div>Item 3</div>
+        <div>Item 4</div>
+        <div>Item 5</div>
+        <div>Item 6</div>
+        <div>Item 7</div>
+        <div>Item 8</div>
+        <div>Item 9</div>
+        <div>Item 10</div>
+        <div>Item 11</div>
+        <div>Item 12</div>
+        <div>Item 13</div>
+        <div>Item 14</div>
+        <div>Item 15</div>
+        <div>Item 16</div>
+        <div>Item 17</div>
+      </div>
+    </article>
+  </body>
+</html>

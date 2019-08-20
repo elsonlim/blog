@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <header>
+      <nav>
+        <h1>
+          <a href="../index.html">Elson's Page</a>
+        </h1>
+      </nav>
+      <nav>
+        <a href="../index.html">Home</a> | <a href="../resume.html">Resume</a> |
+        <a href="../blogs.html">Blogs</a>
+      </nav>
+    </header>
+    <div>
+      <h1>Box Model</h1>
+      <article>
+        <div style="background-color: hotpink">
+          <h3>Content</h3>
+          <p>
+            An element can consist of a content. The area of the content is mark
+            by the background color.
+          </p>
+          <div style="background-color: aquamarine">
+            content
+          </div>
+          <br />
+        </div>
+
+        <div style="background-color: hotpink">
+          <h3>Padding</h3>
+          <p>
+            By default, the content are position on the top left. Let's give the
+            content some room to breath with padding.
+          </p>
+
+          <div style="background-color: aquamarine; padding: 12px;">
+            content
+          </div>
+          <br />
+        </div>
+
+        <div style="background-color: hotpink">
+          <h3>Margin</h3>
+          <p>
+            We can also add spacing between element and other element around it.
+            This is call a margin. The background color doesn't affect the
+            margin.
+          </p>
+          <div
+            style="background-color: aquamarine; padding: 12px; margin: 12px"
+          >
+            content
+          </div>
+          <br />
+        </div>
+
+        <div style="background-color: hotpink">
+          <h3>Border at width 100%</h3>
+          <p>
+            A border can be add to outline the element, border takes up space,
+            by default, border doesn't eat into the content area, this means
+            that an element with border is larger than an element without
+          </p>
+          <div
+            style="background-color: aquamarine; padding: 12px; margin: 12px; border: 3px solid black;"
+          >
+            content
+          </div>
+          <div
+            style="background-color: aquamarine; padding: 12px; margin: 12px"
+          >
+            content
+          </div>
+          <br />
+        </div>
+
+        <div style="background-color: hotpink">
+          <h3>Width @ 300px, box-sizing: content-box</h3>
+          <p>
+            at 50% content width, we can tell that the content with border is
+            indeed larger by 2x border width
+          </p>
+          <div
+            style="background-color: aquamarine; padding: 12px; margin: 12px; border: 3px solid black; width: 300px;"
+          >
+            <p>content: 300px</p>
+            <p>padding: 2 x 12px</p>
+            <p>border: 2 x 3px</p>
+            <p>margin: 2 x 12px</p>
+          </div>
+          <div
+            style="background-color: aquamarine; padding: 12px; margin: 12px; width: 300px;"
+          >
+            <p>content: 300px</p>
+            <p>padding: 2 x 12px</p>
+            <p>margin: 2 x 12px</p>
+          </div>
+          <br />
+        </div>
+
+        <div style="background-color: hotpink">
+          <h3>Width @ 300px, box-sizing: border-box</h3>
+          <p>
+            By default, box sizing is baded on content-box. By changing to
+            border box, we can fix the size based on the border making
+            calculating a lot easier.
+          </p>
+          <div
+            style="background-color: aquamarine; padding: 12px; margin: 12px; border: 3px solid black; width: 300px; box-sizing: border-box;"
+          >
+            <p>content: 270px</p>
+            <p>padding: 2 x 12px</p>
+            <p>border: 2 x 3px</p>
+            <p>margin: 2 x 12px</p>
+          </div>
+          <div
+            style="background-color: aquamarine; padding: 12px; margin: 12px; width: 300px; box-sizing: border-box;"
+          >
+            <p>content: 276px</p>
+            <p>padding: 2 x 12px</p>
+            <p>margin: 2 x 12px</p>
+          </div>
+          <br />
+        </div>
+      </article>
+    </div>
+  </body>
+</html>

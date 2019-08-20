@@ -1,0 +1,11 @@
+.header {
+  background-color: slateblue;
+}
+
+.header > .logo {
+  color: white;
+}
+
+.header > .header-nav {
+   ⇪
+}
