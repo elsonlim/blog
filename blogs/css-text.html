@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .info-box {
+        background-color: hotpink;
+        border-radius: 0.2em;
+        padding: 1em;
+      }
+
+      article + article {
+        margin-top: 1em;
+      }
+
+      .info-box h3 {
+        margin: 0;
+      }
+
+      .info-box__content-box {
+        border-radius: 0.2em;
+        background-color: aquamarine;
+        padding: 1em;
+      }
+
+      .info-box__content-box.small-text-box {
+        width: 300px;
+      }
+
+      code {
+        display: block;
+        background-color: gainsboro;
+        color: green;
+        margin: 0.2em 0;
+        border-radius: 0.2em;
+        padding: 0.2em;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <nav>
+        <h1><a href="../index.html">Elson's Page</a></h1>
+      </nav>
+      <nav class="header-nav">
+        <a href="../index.html">Home</a> | <a href="../resume.html">Resume</a> |
+        <a href="../blogs.html">Blogs</a>
+      </nav>
+    </header>
+    <div class="info-container">
+      <h1>CSS Text</h1>
+      <article class="info-box">
+        <h3>Default</h3>
+        <p>
+          The default behavior of text flows down to next line
+        </p>
+        <div class="info-box__content-box text-box">
+          <p style="margin: 0;">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s
+            with the release of Letraset sheets containing Lorem Ipsum passages,
+            and more recently with desktop publishing software like Aldus
+            PageMaker including versions of Lorem Ipsum.
+          </p>
+        </div>
+      </article>
+      <article class="info-box">
+        <h3>text overflows when container is small. Which is most cases</h3>
+        <p>
+          If you limit the size of the container, the text will overflow
+          downwards.
+        </p>
+        <div class="info-box__content-box small-text-box">
+          <p style="margin: 0; height: 200px;">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s
+            with the release of Letraset sheets containing Lorem Ipsum passages,
+            and more recently with desktop publishing software like Aldus
+            PageMaker including versions of Lorem Ipsum.
+          </p>
+        </div>
+      </article>
+      <br />
+      <br />
+      <br />
+      <article class="info-box">
+        <h3>Single line ellipsis</h3>
+        <p>
+          You can clip text using
+          <code
+            >overflow: hidden; white-space: nowrap; text-overflow:
+            ellipsis;</code
+          >
+          sadly, text-overflow:ellipsis only works on singleline text
+        </p>
+        <div style="width: 80%;" class="info-box__content-box">
+          <div
+            style="
+             overflow: hidden; white-space: nowrap; text-overflow:
+            ellipsis;"
+          >
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s
+            with the release of Letraset sheets containing Lorem Ipsum passages,
+            and more recently with desktop publishing software like Aldus
+            PageMaker including versions of Lorem Ipsum.
+          </div>
+        </div>
+      </article>
+      <article class="info-box">
+        <h3>Multiple line ellipsis</h3>
+        <p>
+          We can achieve this using webkit
+          <code>
+            display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient:
+            vertical; overflow: hidden ;
+          </code>
+          Webkit is a rendering engine that safari uses. Chrome using a
+          rendering engine base on safari so this will work too. Firefox uses
+          something else but they too support webkit.
+        </p>
+
+        <div class="info-box__content-box">
+          <div
+            style="
+              margin: 0;
+              display: -webkit-box;
+              -webkit-line-clamp: 3;
+              -webkit-box-orient: vertical;
+              overflow: hidden;"
+          >
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s
+            with the release of Letraset sheets containing Lorem Ipsum passages,
+            and more recently with desktop publishing software like Aldus
+            PageMaker including versions of Lorem Ipsum.
+          </div>
+        </div>
+      </article>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .info-box {
+        background-color: hotpink;
+        border-radius: 0.2em;
+        padding: 1em;
+      }
+
+      article + article {
+        margin-top: 1em;
+      }
+
+      .info-box h3 {
+        margin: 0;
+      }
+
+      .info-box__content-box {
+        border-radius: 0.2em;
+        background-color: aquamarine;
+        padding: 1em;
+      }
+
+      .info-box__content-box.small-text-box {
+        width: 300px;
+      }
+
+      code {
+        display: block;
+        background-color: gainsboro;
+        color: green;
+        margin: 0.2em 0;
+        border-radius: 0.2em;
+        padding: 0.2em;
+      }
+
+      .flex {
+        display: flex;
+        background-color: rebeccapurple;
+      }
+
+      .flex-vertical {
+        flex-direction: column;
+        height: 6em;
+      }
+
+      .flex > div {
+        background-color: orange;
+        border: 1px solid yellow;
+      }
+
+      .info-box h4 {
+        margin-top: 0.5em;
+        margin-bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <nav>
+        <h1><a href="../index.html">Elson's Page</a></h1>
+      </nav>
+      <nav class="header-nav">
+        <a href="../index.html">Home</a> | <a href="../resume.html">Resume</a> |
+        <a href="../blogs.html">Blogs</a>
+      </nav>
+    </header>
+    <div class="info-container">
+      <h1>CSS flex-box</h1>
+      <article class="info-box">
+        <h3>Default</h3>
+        <p>
+          I guess you would already know that there are block and inline
+          elements in css.
+        </p>
+        <div class="info-box__content-box">
+          <div>block</div>
+          <div>block</div>
+          <div><span>inline</span><span>inline</span></div>
+        </div>
+      </article>
+
+      <article class="info-box">
+        <h3>Flexbox</h3>
+        <p>
+          flexbox allow you to control layout vertically and horizontally in any
+          direction you want. The default flex direction is row which is item
+          going horizontal.
+        </p>
+        <code>
+          display: flex;
+        </code>
+        <div class="info-box__content-box">
+          <div class="flex">
+            <div>block 1</div>
+            <div>block 2</div>
+            <div>block 3</div>
+          </div>
+        </div>
+      </article>
+      <article class="info-box">
+        <h3>Justify content</h3>
+        <p>
+          you can control the spacing and position. The default is flex-start
+        </p>
+        <h4>flex start</h4>
+        <code>
+          display: flex; justify-content: flex-start;
+        </code>
+        <div class="info-box__content-box">
+          <div class="flex" style="justify-content: flex-start">
+            <div>block 1</div>
+            <div>block 2</div>
+            <div>block 3</div>
+          </div>
+        </div>
+        <h4>flex end</h4>
+        <code> display: flex; justify-content: flex-end; </code>
+        <div class="info-box__content-box">
+          <div class="flex" style="justify-content: flex-end">
+            <div>block 1</div>
+            <div>block 2</div>
+            <div>block 3</div>
+          </div>
+        </div>
+        <h4>center</h4>
+        <code> display: flex; justify-content: center; </code>
+        <div class="info-box__content-box">
+          <div class="flex" style="justify-content: center">
+            <div>block 1</div>
+            <div>block 2</div>
+            <div>block 3</div>
+          </div>
+        </div>
+        <h4>space between</h4>
+        <code> display: flex; justify-content: space-between; </code>
+        <div class="info-box__content-box">
+          <div class="flex" style="justify-content: space-between">
+            <div>block 1</div>
+            <div>block 2</div>
+            <div>block 3</div>
+          </div>
+        </div>
+        <h4>space around</h4>
+        <code> display: flex; justify-content: space-around; </code>
+        <div class="info-box__content-box">
+          <div class="flex" style="justify-content: space-around">
+            <div>block 1</div>
+            <div>block 2</div>
+            <div>block 3</div>
+          </div>
+        </div>
+        <h4>space evently</h4>
+        <code> display: flex; justify-content: space-evenly; </code>
+        <div class="info-box__content-box">
+          <div class="flex" style="justify-content: space-evenly">
+            <div>block 1</div>
+            <div>block 2</div>
+            <div>block 3</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="info-box">
+        <h3>Justify Content with flex-direction: column</h3>
+        <p>
+          Justify content adjust content base on the flex-direction. If we are
+          aligning items in a column, justify content will affect items
+          vertically.
+        </p>
+        <h4>flex start</h4>
+        <code>
+          display: flex; justify-content: flex-start;
+        </code>
+        <div class="info-box__content-box">
+          <div class="flex flex-vertical" style="justify-content: flex-start">
+            <div>block 1</div>
+            <div>block 2</div>
+            <div>block 3</div>
+          </div>
+        </div>
+        <h4>flex end</h4>
+        <code> display: flex; justify-content: flex-end; </code>
+        <div class="info-box__content-box">
+          <div class="flex flex-vertical" style="justify-content: flex-end">
+            <div>block 1</div>
+            <div>block 2</div>
+            <div>block 3</div>
+          </div>
+        </div>
+        <h4>center</h4>
+        <code> display: flex; justify-content: center; </code>
+        <div class="info-box__content-box">
+          <div class="flex flex-vertical" style="justify-content: center">
+            <div>block 1</div>
+            <div>block 2</div>
+            <div>block 3</div>
+          </div>
+        </div>
+        <h4>space between</h4>
+        <code> display: flex; justify-content: space-between; </code>
+        <div class="info-box__content-box">
+          <div
+            class="flex flex-vertical"
+            style="justify-content: space-between"
+          >
+            <div>block 1</div>
+            <div>block 2</div>
+            <div>block 3</div>
+          </div>
+        </div>
+        <h4>space around</h4>
+        <code> display: flex; justify-content: space-around; </code>
+        <div class="info-box__content-box">
+          <div class="flex flex-vertical" style="justify-content: space-around">
+            <div>block 1</div>
+            <div>block 2</div>
+            <div>block 3</div>
+          </div>
+        </div>
+        <h4>space evently</h4>
+        <code> display: flex; justify-content: space-evenly; </code>
+        <div class="info-box__content-box">
+          <div class="flex flex-vertical" style="justify-content: space-evenly">
+            <div>block 1</div>
+            <div>block 2</div>
+            <div>block 3</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="info-box">
+        <h3>Align Items</h3>
+        <p>
+          Align items works on the other direction, the common values are
+          flex-start, flex-end and center,
+        </p>
+        <h4>align-items: center</h4>
+        <code> display: flex; align-items: center; </code>
+        <div class="info-box__content-box">
+          <div class="flex" style="align-items: center; height: 5em;">
+            <div>block 1</div>
+            <div>block 2</div>
+            <div>block 3</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="info-box">
+        <h3>Flex Grow</h3>
+        <p>
+          flex grow is applied to items within a flex container. It affects how
+          remaining space can be used.
+        </p>
+        <div class="info-box__content-box">
+          <div class="flex" style="align-items: center; height: 5em;">
+            <div style="flex-grow: 1">grow: 1</div>
+            <div style="flex-grow: 2">grow: 2</div>
+            <div>block 3</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="info-box">
+        <h3>Flex Shrink</h3>
+        <p>
+          flex shrink affects how items will shrink if there is not enough
+          space. Shrinking is proportionate the elements width. means a larger
+          element will shrink more but still likely take a bigger space
+        </p>
+        <div class="info-box__content-box">
+          <div class="flex" style="align-items: center; height: 5em;">
+            <div style="flex-shrink: 1; width: 10em;">shrink: 1</div>
+            <div style="flex-shrink: 2; width: 10em;">shrink: 2</div>
+            <div>block 3</div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </body>
+</html>

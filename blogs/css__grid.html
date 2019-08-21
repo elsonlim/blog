@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .info-box {
+        background-color: hotpink;
+        border-radius: 0.2em;
+        padding: 1em;
+      }
+
+      article + article {
+        margin-top: 1em;
+      }
+
+      .info-box h3 {
+        margin: 0;
+      }
+
+      .info-box__content-box {
+        border-radius: 0.2em;
+        background-color: aquamarine;
+        padding: 1em;
+      }
+
+      .info-box__content-box.small-text-box {
+        width: 300px;
+      }
+
+      code {
+        display: block;
+        background-color: gainsboro;
+        color: green;
+        margin: 0.2em 0;
+        border-radius: 0.2em;
+        padding: 0.2em;
+      }
+
+      .grid-box {
+        display: grid;
+        grid-gap: 0.5em;
+        grid-template-areas:
+          "header header"
+          "content aside"
+          "footer footer";
+        grid-template-rows: 20px 100px 20px;
+        grid-template-columns: 3fr 1fr;
+      }
+
+      .grid-box > div {
+        background-color: cornflowerblue;
+        color: white;
+      }
+
+      .header {
+        grid-row: header;
+        grid-column: header;
+      }
+
+      .content {
+        grid-row: content;
+        grid-column: content;
+      }
+
+      .aside {
+        grid-row: aside;
+        grid-column: aside;
+      }
+
+      .footer {
+        grid-row: footer;
+        grid-column: footer;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <nav>
+        <h1><a href="../index.html">Elson's Page</a></h1>
+      </nav>
+      <nav class="header-nav">
+        <a href="../index.html">Home</a> | <a href="../resume.html">Resume</a> |
+        <a href="../blogs.html">Blogs</a>
+      </nav>
+    </header>
+    <div class="info-container">
+      <h1>CSS grid</h1>
+      <article class="info-box">
+        <h3>Explicit Grid</h3>
+        <p>
+          One very common layout is to have header, content and footer.
+        </p>
+        <div class="info-box__content-box">
+          <div class="grid-box">
+            <div class="header">header</div>
+            <div class="content">content</div>
+            <div class="aside">aside</div>
+            <div class="footer">footer</div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </body>
+</html>
