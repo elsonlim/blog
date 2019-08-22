@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=P, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Pokemon Album</title>
+    <link rel="stylesheet" href="../css/album.css" />
+  </head>
+  <body>
+    <h1>Album</h1>
+    <div id="album" class="implcit-grid"></div>
+
+    <script>
+      let album = document.querySelector("#album");
+      for (let i = 1; i <= 51; i++) {
+        const imgContainer = document.createElement("DIV");
+        imgContainer.setAttribute("class", "album-image");
+        if (Math.random() > 0.9) {
+          imgContainer.classList.add("large");
+        }
+        const img = document.createElement("IMG");
+        img.setAttribute("src", `../assets/pokemon-images/${i}.png`);
+
+        imgContainer.appendChild(img);
+        album.appendChild(imgContainer);
+      }
+    </script>
+  </body>
+</html>
