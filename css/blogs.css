@@ -1,0 +1,47 @@
+.blog-article {
+  display: block;
+  border: 1px solid gray;
+  margin: 1em;
+  border-radius: 0.2em;
+}
+
+.blog-article * {
+  margin: 0;
+  padding: 0;
+}
+
+.blog-article {
+  padding: 0.5em;
+  font-size: 0.7em;
+  max-width: 40em;
+  margin-top: 1em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.blog-article h2 {
+  font-size: 1.2em;
+}
+
+.blog-article .click-me {
+  text-align: right;
+}
+
+.blog-article a {
+  text-decoration: none;
+}
+
+.blog-article .click-me a:hover {
+  background: linear-gradient(
+    90deg,
+    red,
+    orange,
+    yellow,
+    green,
+    cyan,
+    blue,
+    violet
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
