@@ -2,9 +2,18 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="./app.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </head>
   <body>
-    <header class="header">
+    <div id="header">
+      <img
+        style="display: block; margin: auto;"
+        src="./assets/loading.gif"
+        width="40em"
+        height="40em"
+      />
+    </div>
+    <!-- <header class="header">
       <nav>
         <h1><a href="./index.html">Elson's Blog</a></h1>
       </nav>
@@ -12,7 +21,7 @@
         <a href="./index.html">Home</a> | <a href="./resume.html">Resume</a> |
         <a class="active" href="./blogs.html">Blogs</a>
       </nav>
-    </header>
+    </header> -->
     <div>
       <article class="blog-article">
         <h2>Box modeling</h2>
@@ -74,5 +83,8 @@
         </div>
       </article>
     </div>
+    <script>
+      $("#header").load("./header.html");
+    </script>
   </body>
 </html>
