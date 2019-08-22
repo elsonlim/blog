@@ -1,0 +1,144 @@
+.resume {
+  margin: 1em;
+  padding: 1em;
+  border: 1px solid grey;
+  display: grid;
+  grid-gap: 0.5em;
+  grid-template-areas:
+    "header header"
+    "address address"
+    "experience skills"
+    "experience education"
+    "personal personal";
+  grid-template-rows: auto auto auto auto auto;
+  grid-template-columns: 3fr 2fr;
+}
+
+@media only screen and (max-width: 600px) {
+  .resume {
+    grid-template-areas:
+      "header"
+      "address"
+      "skills"
+      "experience"
+      "education"
+      "personal";
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+  }
+}
+
+.resume .skills {
+  grid-row: skills;
+  grid-column: skills;
+}
+
+.resume .education {
+  grid-row: education;
+  grid-column: education;
+}
+
+.resume .experience {
+  grid-row: experience;
+  grid-column: experience;
+}
+
+.resume .personal {
+  grid-row: personal;
+  grid-column: personal;
+}
+
+.resume article {
+  margin: 0;
+  font-size: 0.7rem;
+}
+
+.resume h1,
+.resume h2,
+.resume h3,
+.resume li,
+.resume li p,
+.resume li + li {
+  margin: 0;
+}
+
+.resume h1,
+h2 {
+  margin-left: 1em;
+}
+
+.resume h2 {
+  margin-top: 0.5em;
+  margin-bottom: 0.2em;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.resume h3 {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.resume p,
+.resume li {
+  font-size: 0.7rem;
+  font-weight: normal;
+}
+
+.resume ul {
+  padding-left: 0;
+  margin: 0;
+}
+
+.resume .resume-title {
+  grid-row: header;
+  grid-column: header;
+  justify-self: center;
+  margin: 0.3em;
+}
+
+.resume .address {
+  grid-row: address;
+  grid-column: address;
+  justify-self: center;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 0.7rem;
+  width: 100%;
+
+  padding-bottom: 1em;
+  border-bottom: 1px solid gray;
+}
+
+.resume .address > address + address {
+  margin-left: 1em;
+}
+
+.info-list > ul > li {
+  list-style: none;
+}
+
+.info-list .job-title {
+  font-weight: bold;
+  margin-right: 1em;
+}
+
+.pointers {
+  display: list-item;
+  list-style-type: disc;
+  list-style-position: inside;
+  margin: 0;
+  padding: 0;
+}
+
+.skills ul,
+.personal ul {
+  margin-left: 1em;
+}
+
+.experience ul > li + li,
+.education ul > li + li {
+  margin-top: 0.5em;
+}

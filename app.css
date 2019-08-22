@@ -1,3 +1,6 @@
+@import "./css/header.css";
+@import "./css/grid.css";
+
 @import url("https://fonts.googleapis.com/css?family=Butcherman|Playfair+Display|Roboto&display=swap");
 
 :root {
@@ -15,71 +18,10 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-.header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  background-color: slateblue;
-  height: 3em;
-  padding-left: 1em;
-  padding-right: 1em;
-  color: white;
-  position: sticky;
-}
-
-.header .logo a {
-  font-family: "Butcherman", serif;
-}
-
-.header a {
-  color: aliceblue;
-  text-decoration: none;
-  font-family: "Playfair Display", serif;
-}
-
-.header nav a:hover {
-  background: linear-gradient(
-    90deg,
-    red,
-    orange,
-    yellow,
-    green,
-    blue,
-    violet,
-    purple
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.header h1 {
-  margin: 0;
-}
-
-h1 a {
-  text-decoration: none;
-}
-
 section,
 article,
 footer {
   margin-left: 1em;
-}
-
-.header nav a.active {
-  text-decoration: underline;
-  color: orange;
-  pointer-events: none;
-}
-
-.header nav a.active:hover {
-  text-decoration: underline;
-  cursor: default;
-  color: orange;
-  background: none;
-  -webkit-background-clip: unset;
-  -webkit-text-fill-color: unset;
 }
 
 .main-content {
