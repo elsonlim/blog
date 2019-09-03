@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>cssVariable</title>
+  </head>
+
+  <body>
+    <style>
+      body,
+      h1 {
+        margin: 0;
+      }
+
+      :root {
+        --header-background: seagreen;
+        --header-text: white;
+        --content-text: brown;
+        --content-background: white;
+        --content-code: purple;
+      }
+
+      body.dark {
+        --header-background: black;
+        --header-text: white;
+        --content-text: white;
+        --content-background: brown;
+        --content-code: lightSeaGreen;
+      }
+
+      body {
+        background-color: var(--content-background);
+      }
+
+      .header {
+        width: 100%;
+        background-color: var(--header-background);
+        color: var(--header-text);
+        padding-left: 1em;
+      }
+
+      h1 {
+        line-height: 3rem;
+      }
+
+      .content {
+        padding: 1em;
+      }
+
+      .content p {
+        color: var(--content-text);
+      }
+
+      code {
+        color: var(--content-code);
+      }
+    </style>
+    <script>
+      function toggleDarkMode() {
+        const element = document.getElementsByTagName("body")[0];
+        element.classList.toggle("dark");
+      }
+    </script>
+    <header class="header">
+      <h1>
+        header
+      </h1>
+    </header>
+    <section class="content">
+      <input type="button" value="toggle lighting" onclick="toggleDarkMode()" />
+      <p>
+        CSS variable allows you to create a custom name to a value a good place
+        to put them is in body or :root
+      </p>
+
+      <code>
+        :root { --content-background: blue; }
+      </code>
+
+      <p>To use the variable, we need the <code>var()</code> function</p>
+
+      <code>
+        code { color: var(--content-code); }
+      </code>
+
+      <p>we can override the variables on specific class</p>
+      <code>
+        body.dark {<br />
+        &nbsp;&nbsp;--header-background: black;<br />
+        &nbsp;&nbsp;--header-text: white;<br />
+        &nbsp;&nbsp;--content-text: white;<br />
+        &nbsp;&nbsp;--content-background: brown;<br />
+        &nbsp;&nbsp;--content-code: lightSeaGreen;<br />
+        }<br />
+      </code>
+
+      <p>
+        We cam now toggle the class to change all the colors within the page.
+      </p>
+
+      <code>
+        function toggleDarkMode() {<br />
+        &nbsp;&nbsp;const element = document.getElementsByTagName("body")[0];<br />
+        &nbsp;&nbsp;element.classList.toggle("dark");<br />
+        }<br />
+      </code>
+    </section>
+  </body>
+</html>
