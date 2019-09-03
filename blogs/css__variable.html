@@ -32,10 +32,17 @@
       }
 
       .header {
-        width: 100%;
-        background-color: var(--header-background);
-        color: var(--header-text);
         padding-left: 1em;
+        padding-right: 1em;
+        background-color: var(--header-background);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .header a {
+        color: var(--header-text);
+        text-decoration: none;
       }
 
       h1 {
@@ -60,10 +67,18 @@
         element.classList.toggle("dark");
       }
     </script>
+
     <header class="header">
-      <h1>
-        header
-      </h1>
+      <nav>
+        <h1><a href="../index.html">Elson's Page</a></h1>
+      </nav>
+      <div>
+        <nav class="header-nav">
+          <a href="../index.html">Home</a> |
+          <a href="../resume.html">Resume</a> |
+          <a href="../blogs.html">Blogs</a>
+        </nav>
+      </div>
     </header>
     <section class="content">
       <input type="button" value="toggle lighting" onclick="toggleDarkMode()" />
@@ -94,7 +109,7 @@
       </code>
 
       <p>
-        We cam now toggle the class to change all the colors within the page.
+        We can now toggle the class to change all the colors within the page.
       </p>
 
       <code>
